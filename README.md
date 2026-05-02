@@ -3,7 +3,7 @@
 A modern livestock marketplace for Qurbani animals in Bangladesh.
 
 ## Live URL
-[https://qurbani-hat.vercel.app](https://qurbani-hat.vercel.app)
+[https://a-08-project.vercel.app/](https://a-08-project.vercel.app/)
 
 ## Features
 - Browse cows and goats for Qurbani
@@ -24,7 +24,7 @@ A modern livestock marketplace for Qurbani animals in Bangladesh.
 
 ## How to Run Locally
 ```bash
-git clone https://github.com/username/qurbani-hat.git
+git clone https://github.com/mdmonimul95-crypto/A-08-project
 cd qurbani-hat
 npm install
 npm run dev
