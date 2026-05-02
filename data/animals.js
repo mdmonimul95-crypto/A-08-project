@@ -9,7 +9,7 @@ const animals = [
     age: 3,
     location: "Bogura",
     description: "সুস্থ ও হৃষ্টপুষ্ট দেশি গরু। প্রাকৃতিক খাবারে লালিত। কুরবানির জন্য উপযুক্ত।",
-    image: "https://i.postimg.cc/Y0Q5Q5Q5/cow1.jpg",
+    image: "https://images.unsplash.com/photo-1546445317-29f4545e9d53?w=600&auto=format&fit=crop",
     category: "Large Animal",
   },
   {
@@ -22,7 +22,7 @@ const animals = [
     age: 4,
     location: "Rajshahi",
     description: "বড় ও শক্তিশালী শাহিওয়াল জাতের ষাঁড়। কুরবানির জন্য আদর্শ।",
-    image: "https://i.postimg.cc/Y0Q5Q5Q5/cow2.jpg",
+    image: "https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?w=600&auto=format&fit=crop",
     category: "Large Animal",
   },
   {
@@ -35,7 +35,7 @@ const animals = [
     age: 5,
     location: "Dhaka",
     description: "অস্ট্রেলিয়ান জাতের বিশাল গরু। ওজন ৫০০ কেজির বেশি।",
-    image: "https://i.postimg.cc/Y0Q5Q5Q5/cow3.jpg",
+    image: "https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=600&auto=format&fit=crop",
     category: "Large Animal",
   },
   {
@@ -48,7 +48,7 @@ const animals = [
     age: 2,
     location: "Cumilla",
     description: "দেশি খাসি। সুস্থ ও পরিষ্কার। ছোট পরিবারের জন্য উপযুক্ত।",
-    image: "https://i.postimg.cc/Y0Q5Q5Q5/goat1.jpg",
+    image: "https://images.unsplash.com/photo-1524024973431-2ad916746881?w=600&auto=format&fit=crop",
     category: "Small Animal",
   },
   {
@@ -61,7 +61,7 @@ const animals = [
     age: 3,
     location: "Sylhet",
     description: "ব্ল্যাক বেঙ্গল জাতের ছাগল। মাংস অত্যন্ত সুস্বাদু।",
-    image: "https://i.postimg.cc/Y0Q5Q5Q5/goat2.jpg",
+    image: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=600&auto=format&fit=crop",
     category: "Small Animal",
   },
   {
@@ -74,7 +74,7 @@ const animals = [
     age: 3,
     location: "Khulna",
     description: "যমুনাপারি জাতের বড় ছাগল। দুধ ও মাংস উভয়ের জন্য বিখ্যাত।",
-    image: "https://i.postimg.cc/Y0Q5Q5Q5/goat3.jpg",
+    image: "https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=600&auto=format&fit=crop",
     category: "Small Animal",
   },
   {
@@ -87,7 +87,7 @@ const animals = [
     age: 5,
     location: "Chattogram",
     description: "ব্রাহমান জাতের বিশাল ষাঁড়। সর্বোচ্চ মানের কুরবানির পশু।",
-    image: "https://i.postimg.cc/Y0Q5Q5Q5/cow4.jpg",
+    image: "https://images.unsplash.com/photo-1527153818091-1a9638521e2a?w=600&auto=format&fit=crop",
     category: "Large Animal",
   },
   {
@@ -100,7 +100,7 @@ const animals = [
     age: 2,
     location: "Mymensingh",
     description: "নালি জাতের ছাগল। স্বাস্থ্যকর ও পরিষ্কার পরিবেশে লালিত।",
-    image: "https://i.postimg.cc/Y0Q5Q5Q5/goat4.jpg",
+    image: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=600&auto=format&fit=crop",
     category: "Small Animal",
   },
 ];

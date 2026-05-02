@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="bg-green-800 text-white mt-16">
       <div className="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
-          <h3 className="text-xl font-bold mb-3">🐄 QurbaniHat</h3>
+          <h3 className="text-xl font-bold mb-3"> QurbaniHat</h3>
           <p className="text-green-200 text-sm">
             বাংলাদেশের সেরা অনলাইন কুরবানির পশুর হাট। বিশ্বস্ততার সাথে সেবা দিয়ে আসছি।
           </p>
@@ -24,9 +24,9 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold mb-3">Contact</h4>
           <ul className="space-y-2 text-green-200 text-sm">
-            <li>📞 +880 1700-000000</li>
-            <li>📧 info@qurbanihat.com</li>
-            <li>📍 Dhaka, Bangladesh</li>
+            <li> +880 1700-000000</li>
+            <li> info@qurbanihat.com</li>
+            <li> Dhaka, Bangladesh</li>
           </ul>
           <div className="flex gap-3 mt-4">
             <a href="#" className="bg-green-600 px-3 py-1 rounded text-sm hover:bg-green-500">Facebook</a>
