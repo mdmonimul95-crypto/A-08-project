@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-, "lib/auth-client.js", "lib/auth.js", "next.config.mjs", "app/layout.js", "app/page.js"  ],
+, "lib/auth-client.js", "lib/auth.js", "next.config.mjs", "app/layout.jsx", "app/page.jsx"  ],
   "exclude": ["node_modules"]
 }
