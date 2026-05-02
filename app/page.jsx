@@ -47,12 +47,12 @@ export default function Home() {
         {
           title: "সুস্থ পশু বেছে নিন",
           desc: "কুরবানির পশু অবশ্যই সুস্থ, নিখুঁত এবং বয়সে পরিপক্ক হতে হবে।",
-          img: "https://images.unsplash.com/photo-1546445317-29f4545e9d53?w=200&auto=format&fit=crop",
+          img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ0WJDJWjTiUA7IY1ktZ2eejxRdyVNmqGKIQ&s",
         },
         {
           title: "আগেই বুকিং দিন",
           desc: "ঈদের আগে পশুর দাম বাড়ে। তাই আগেভাগে বুকিং দিয়ে রাখুন।",
-          img: "https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?w=200&auto=format&fit=crop",
+          img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXj0fk0FRVlki16nKEJbU6VYtFs0NsWEnFzA&s",
         },
         {
           title: "ডেলিভারি নিশ্চিত করুন",
@@ -84,22 +84,22 @@ export default function Home() {
       {
         breed: "Local Deshi",
         count: "সবচেয়ে জনপ্রিয়",
-        img: "https://images.unsplash.com/photo-1546445317-29f4545e9d53?w=200&auto=format&fit=crop",
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8X4iywnsFojitCFv6-FFI-GOTWISUaZiyOA&s",
       },
       {
         breed: "Shahiwal",
         count: "উচ্চ মাংস উৎপাদন",
-        img: "https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?w=200&auto=format&fit=crop",
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXj0fk0FRVlki16nKEJbU6VYtFs0NsWEnFzA&s",
       },
       {
         breed: "Black Bengal",
         count: "সুস্বাদু মাংস",
-        img: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=200&auto=format&fit=crop",
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ0WJDJWjTiUA7IY1ktZ2eejxRdyVNmqGKIQ&s",
       },
       {
         breed: "Jamuna Pari",
         count: "বড় আকৃতি",
-        img: "https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=200&auto=format&fit=crop",
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8X4iywnsFojitCFv6-FFI-GOTWISUaZiyOA&s",
       },
     ].map((b, i) => (
       <div

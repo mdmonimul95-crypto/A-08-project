@@ -1,10 +1,14 @@
 import Link from "next/link";
+import { SiHappycow } from "react-icons/si";
 export default function Footer() {
 
   return (
     <footer className="bg-green-800 text-white mt-16">
       <div className="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
+             <div className="w-32 h-32 bg-gradient-to-br from-gold to-gold-light rounded-3xl flex items-center justify-center">
+              <SiHappycow size={72} color="#1a1200" />
+             </div>
           <h3 className="text-xl font-bold mb-3"> QurbaniHat</h3>
           <p className="text-green-200 text-sm">
             বাংলাদেশের সেরা অনলাইন কুরবানির পশুর হাট। বিশ্বস্ততার সাথে সেবা দিয়ে আসছি।

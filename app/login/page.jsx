@@ -1,10 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { signIn } from "@/lib/auth-client";
+import { loginUser } from "@/app/actions/auth";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import toast from "react-hot-toast";
+import { signIn } from "@/lib/auth-client";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -15,19 +16,15 @@ export default function LoginPage() {
   const handleLogin = async (e) => {
     e.preventDefault();
     setLoading(true);
-    try {
-      const res = await signIn.email({ email, password });
-      if (res.error) {
-        toast.error(res.error.message || "Login failed!");
-      } else {
-        toast.success("Login successful!");
-        router.push("/");
-      }
-    } catch (err) {
-      toast.error("Something went wrong!");
-    } finally {
-      setLoading(false);
+    const res = await loginUser({ email, password });
+    if (res.success) {
+      toast.success("Login successful!");
+      router.push("/");
+      router.refresh();
+    } else {
+      toast.error(res.error || "Login failed!");
     }
+    setLoading(false);
   };
 
   const handleGoogle = async () => {
@@ -38,7 +35,7 @@ export default function LoginPage() {
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
       <div className="bg-white rounded-2xl shadow-md p-8 w-full max-w-md">
         <h1 className="text-2xl font-bold text-center text-green-700 mb-6">
-          🐄 Login to QurbaniHat
+          Login to QurbaniHat
         </h1>
 
         <form onSubmit={handleLogin} className="space-y-4">
@@ -89,7 +86,7 @@ export default function LoginPage() {
           onClick={handleGoogle}
           className="w-full border border-gray-300 rounded-lg py-2 flex items-center justify-center gap-2 hover:bg-gray-50 transition font-medium"
         >
-          <img src="https://www.google.com/favicon.ico" className="w-5 h-5" />
+          <img src="https://www.google.com/favicon.ico" className="w-5 h-5" alt="Google" />
           Continue with Google
         </button>
 

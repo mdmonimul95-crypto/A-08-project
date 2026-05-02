@@ -1,10 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { signUp, signIn } from "@/lib/auth-client";
+import { registerUser } from "@/app/actions/auth";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import toast from "react-hot-toast";
+import { signIn } from "@/lib/auth-client";
 
 export default function RegisterPage() {
   const [name, setName] = useState("");
@@ -17,24 +18,14 @@ export default function RegisterPage() {
   const handleRegister = async (e) => {
     e.preventDefault();
     setLoading(true);
-    try {
-      const res = await signUp.email({
-        name,
-        email,
-        password,
-        image: photoUrl,
-      });
-      if (res.error) {
-        toast.error(res.error.message || "Registration failed!");
-      } else {
-        toast.success("Registration successful!");
-        router.push("/login");
-      }
-    } catch (err) {
-      toast.error("Something went wrong!");
-    } finally {
-      setLoading(false);
+    const res = await registerUser({ name, email, password, image: photoUrl });
+    if (res.success) {
+      toast.success("Registration successful!");
+      router.push("/login");
+    } else {
+      toast.error(res.error || "Registration failed!");
     }
+    setLoading(false);
   };
 
   const handleGoogle = async () => {
@@ -45,7 +36,7 @@ export default function RegisterPage() {
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
       <div className="bg-white rounded-2xl shadow-md p-8 w-full max-w-md">
         <h1 className="text-2xl font-bold text-center text-green-700 mb-6">
-          🐄 Register to QurbaniHat
+          Register to QurbaniHat
         </h1>
 
         <form onSubmit={handleRegister} className="space-y-4">
@@ -123,7 +114,7 @@ export default function RegisterPage() {
           onClick={handleGoogle}
           className="w-full border border-gray-300 rounded-lg py-2 flex items-center justify-center gap-2 hover:bg-gray-50 transition font-medium"
         >
-          <img src="https://www.google.com/favicon.ico" className="w-5 h-5" />
+          <img src="https://www.google.com/favicon.ico" className="w-5 h-5" alt="Google" />
           Continue with Google
         </button>
 

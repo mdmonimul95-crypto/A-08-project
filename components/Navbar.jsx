@@ -7,6 +7,7 @@ import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem } from "@heroui/d
 import Link from "next/link";
 import { useSession, signOut } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
+import { SiHappycow } from "react-icons/si";
 
 export default function AppNavbar() {
   const { data: session } = useSession();
@@ -20,8 +21,11 @@ export default function AppNavbar() {
   return (
     <Navbar isBordered className="bg-white shadow-sm">
       <NavbarBrand>
+       <div className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-gradient-to-br from-gold to-gold-light rounded-xl sm:rounded-2xl flex items-center justify-center">
+         <SiHappycow className="w-6 h-6 sm:w-8 sm:h-8 md:w-11 md:h-11" color="#1a1200" />
+       </div>
         <Link href="/" className="font-bold text-xl text-green-600">
-          🐄 QurbaniHat
+           QurbaniHat
         </Link>
       </NavbarBrand>
 
