@@ -45,7 +45,7 @@ export default function AnimalDetails() {
       return;
     }
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 1000));
+    // await new Promise((r) => setTimeout(r, 1000));
     toast.success("বুকিং সফল হয়েছে! আমরা শীঘ্রই যোগাযোগ করবো।");
     setForm({ name: "", email: "", phone: "", address: "" });
     setLoading(false);
