@@ -1,5 +1,4 @@
 "use client";
-
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem } from "@heroui/navbar";
 import { Button } from "@heroui/button";
 import { Avatar } from "@heroui/avatar";
@@ -19,13 +18,13 @@ export default function AppNavbar() {
   };
 
   return (
-    <Navbar isBordered className="bg-white shadow-sm">
-      <NavbarBrand>
-       <div className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-gradient-to-br from-gold to-gold-light rounded-xl sm:rounded-2xl flex items-center justify-center">
-         <SiHappycow className="w-6 h-6 sm:w-8 sm:h-8 md:w-11 md:h-11" color="#1a1200" />
-       </div>
-        <Link href="/" className="font-bold text-xl text-green-600">
-           QurbaniHat
+    <Navbar isBordered className="bg-white shadow-sm h-14">
+      <NavbarBrand className="gap-1">
+        <div className="w-8 h-8 bg-gradient-to-br from-gold to-gold-light rounded-lg flex items-center justify-center">
+          <SiHappycow className="w-5 h-5" color="#1a1200" />
+        </div>
+        <Link href="/" className="font-bold text-base sm:text-xl text-green-600">
+          QurbaniHat
         </Link>
       </NavbarBrand>
 
@@ -42,44 +41,40 @@ export default function AppNavbar() {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarContent justify="end">
-        {session?.user ? (
-          <Dropdown>
-            <DropdownTrigger>
-              <Avatar
-                src={session.user.image || ""}
-                name={session.user.name}
-                size="sm"
-                className="cursor-pointer"
-              />
-            </DropdownTrigger>
-            <DropdownMenu>
-              <DropdownItem key="profile">
-                <Link href="/my-profile">My Profile</Link>
-              </DropdownItem>
-              <DropdownItem
-                key="logout"
-                className="text-red-500"
-                onClick={handleLogout}
-              >
-                Logout
-              </DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
-        ) : (
-          <>
-           <NavbarItem>
-            <Button variant="light" color="success" as={Link} href="/login">
-             Login
-             </Button>
-             </NavbarItem>
-             <NavbarItem>
-              <Button color="success" as={Link} href="/register">
-              Register
-             </Button>
-           </NavbarItem>
-          </>
-        )}
+      <NavbarContent justify="end" className="gap-1">
+  {session?.user ? (
+    <Dropdown>
+      <DropdownTrigger>
+        <Avatar
+          src={session.user.image || ""}
+          name={session.user.name}
+          size="sm"
+          className="cursor-pointer"
+        />
+      </DropdownTrigger>
+      <DropdownMenu>
+        <DropdownItem key="profile">
+          <Link href="/my-profile">My Profile</Link>
+        </DropdownItem>
+        <DropdownItem key="logout" className="text-red-500" onClick={handleLogout}>
+          Logout
+        </DropdownItem>
+      </DropdownMenu>
+    </Dropdown>
+  ) : (
+    <>
+      <NavbarItem>
+        <Button variant="light" color="success" as={Link} href="/login" size="sm" className="px-2 min-w-0">
+          Login
+        </Button>
+      </NavbarItem>
+      <NavbarItem>
+        <Button color="success" as={Link} href="/register" size="sm" className="px-2 min-w-0">
+          Register
+        </Button>
+      </NavbarItem>
+    </>
+  )}
       </NavbarContent>
     </Navbar>
   );
